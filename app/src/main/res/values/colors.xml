@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343438</color>
+    <color name="colorPrimaryDark">#343438</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="challenge_blue_card_title">#3171ac</color>
+    <color name="desafio_dourado">#df9813</color>
+    <color name="divider">#e0e0e0</color>
+    <color name="alert_color">#F0F0F0</color>
+</resources>

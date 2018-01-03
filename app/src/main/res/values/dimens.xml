@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="item_repository_height">110dp</dimen>
+    <dimen name="icon_size">45dp</dimen>
+    <dimen name="alert_height">50dp</dimen>
+</resources>

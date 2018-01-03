@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="AppTheme.Button">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Button.Rounded" parent="AppTheme.Button">
+        <item name="android:background">@drawable/effect_button_press</item>
+    </style>
+
+</resources>

@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Desafio Concrete</string>
+    <string name="java_pop">Github JavaPop</string>
+    <string name="loading_page" formatted="false" tools:ignore="StringFormatInvalid">Carregando página %s…</string>
+    <string name="repository_name">Nome Repositório</string>
+    <string name="description">Descrição do repositírio este texto deve ser subsituído pelos valores que vem da API.</string>
+    <string name="mock_full_name">Nome e Sobrenome</string>
+    <string name="information">Informação</string>
+    <string name="reposotory">Repositório</string>
+    <string name="does_not_contain_pr">não contém Pull Requests.</string>
+    <string name="icon_description">Ícone</string>
+    <string name="error_generic">Não foi possível completar a requisição.</string>
+    <string name="error">Erro</string>
+    <string name="please_wait">Por favor aguarde…</string>
+    <string name="please_wait_message">Conectando com o servidor…</string>
+    <string name="number_items">%s items</string>
+    <string name="retry">Tentar novamente</string>
+    <string name="cancel">Cancelar</string>
+    <string name="mock_description">É importante questionar o quanto o desenvolvimento contínuo de distintas formas de atuação cumpre um papel essencial na formulação de alternativas às soluções ortodoxas.</string>
+    <string name="open_close_prs" formatted="false">%s opened / %s closed</string>
+    <string name="open_prs">%s opened</string>
+    <string name="back">Voltar</string>
+</resources>

@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    compileOptions.incremental = true
+
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+        javaMaxHeapSize "2048m"
+    }
+
+    defaultConfig {
+        applicationId "br.com.concrete.android.raphael.desafio"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+
+        debug {
+            buildConfigField "String", "BASE_URL", '"https://api.github.com"'
+            buildConfigField "String", "TEST_BASE_URL", '"http://localhost:1234/"'
+            minifyEnabled false
+            testCoverageEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Google dependencies
+    final google = '26.1.0'
+    implementation "com.android.support:appcompat-v7:$google"
+    implementation "com.android.support:cardview-v7:$google"
+    implementation "com.android.support:recyclerview-v7:$google"
+    implementation "com.android.support:support-v4:$google"
+    implementation "com.android.support:design:$google"
+
+    // Network retrofit dependencies
+    final retrofit = '2.3.0'
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    // Network okhtto dependencies
+    final okhttp = '3.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:$okhttp"
+
+    // Gson dependency
+    final gson = '2.8.2'
+    implementation "com.google.code.gson:gson:$gson"
+
+    // UI dependencies
+    final picasso = '2.5.2'
+    final constraint = '1.0.2'
+    final butterknife = '8.8.1'
+    implementation "com.squareup.picasso:picasso:$picasso"
+    implementation "com.android.support.constraint:constraint-layout:$constraint"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife"
+    implementation "com.jakewharton:butterknife:$butterknife"
+
+    // Dagger 2 dependencies
+    final dagger2 = '2.12'
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger2"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger2"
+    implementation "com.google.dagger:dagger-android:$dagger2"
+
+    // RxJava2 dependencies
+    final rxjavaVersion = '2.1.5'
+    final rxandroidVersion = '2.0.1'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+
+    // Logging dependencies
+    final timber = '4.5.1'
+    implementation "com.jakewharton.timber:timber:$timber"
+
+    // Local test dependencies
+    final junit = '4.12'
+    final hamcrest = '1.3'
+    final mockito = '1.10.19'
+    testImplementation "junit:junit:$junit"
+    testImplementation "org.hamcrest:hamcrest-all:$hamcrest"
+    testImplementation "com.squareup.okhttp3:okhttp:$okhttp"
+    testImplementation "org.mockito:mockito-core:$mockito"
+
+    // Instrumented test dependencies
+    final espresso = '2.3-alpha'
+    androidTestImplementation("com.android.support.test.espresso:espresso-intents:$espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: "com.google.code.findbugs"
+    })
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    })
+
+}
