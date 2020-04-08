@@ -1,7 +1,7 @@
 package br.com.concrete.android.raphael.desafio.base;
 
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ProgressBar;
 
 import br.com.concrete.android.raphael.desafio.R;
